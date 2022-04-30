@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import PasswordInput
 
 # Create your models here.
 
@@ -13,3 +14,15 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class user(models.Model):
+    
+    firstname = models.CharField(max_length=255)
+    lastname = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
+    dateofcreation = models.DateTimeField(max_length=255)
+   
+    def __str__(self):
+        return self.firstname
