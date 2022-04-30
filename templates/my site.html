@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title> Payez en ligne </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    
+    
+    <style>   
+#nom{
+    background-color: black;
+    color: white; 
+}
+#prenom{
+    background-color: black;
+    color: white; 
+}
+#daten{
+    background-color: black;
+    color: grey; 
+}
+#mail{
+    background-color: black;
+    color: white; 
+}
+#tel{
+    background-color: black;
+    color: white; 
+}
+#adress{
+    background-color: black;
+    color: white; 
+}
+#paiement{
+    background-color: black;
+    color: white;
+}
+#cvv{
+    background-color: black;
+    color: white; 
+}
+#exp{
+    background-color: black;
+    color: white; 
+}
+form{
+    line-height: 1.5em;
+    width: 40%;
+    border-style:  outset;  
+}
+a{
+    color:#000;
+    text-decoration: none;
+    width: 5em;
+    height: 2em;
+}
+button{
+    width: 5em;
+    height: 2em;
+} 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;  
+}
+
+section{
+    padding: 50px;    
+}
+
+::-webkit-scrollbar
+{
+    
+    
+    width: 0;
+    
+    
+}
+
+#scrollpath
+{
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    
+}
+
+#progressbar
+{
+    
+     position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    
+    background: linear-gradient(to top,#008aff,#00ffe7);
+   animation: animate 5s linear infinite;
+    
+    
+}
+
+@keyframes animate{
+    
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+        
+        
+    }
+    
+        50%
+    {
+        filter: hue-rotate(360deg);
+        
+        
+    }
+    
+    
+}
+
+
+#progressbar:before
+{
+    content: '';
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    filter: blur(30px);
+    
+    
+}
+
+#progressbar:after
+{
+    content: '';
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    filter: blur(30px);
+    
+    
+}
+
+
+
+ 
+        
+        
+        
+  h1{
+  color: #484848;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer
+}
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+  content: "";
+}
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+    
+}      
+        
+        
+        .ENV{
+            
+            cursor: pointer;
+            
+        }        
+        
+        
+    </style>    
+    
+</head>
+    
+        <header>
+        
+      <a name="haut">
+        <center><a href="#bas">
+                <FONT color=#808080> vers le bas</FONT>
+            </a></center>
+    
+    </header>
+    
+<BODY BACKGROUND="/static/BACKGROUND.jpeg" P STYLE="COLOR:WHITE">
+    
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    
+    <section>
+       
+    
+<section>
+
+  
+<br>
+
+      
+    <center>
+        
+        <h1><span>YF</span>-<span>Paiement en ligne du produit:</span></h1> 
+    </center>    
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+          <center>  <h2>  Formulaire a remplir </h2> </center>
+	     <br>   
+<CENTER>
+		<form name="formulaire1" action="my site.html">
+            <br>
+            <tr><td><center><input type ="text"  name ="nom"   id ="nom"  placeholder = " Nom "  required></td></center></tr><br>
+             <tr><td><center><input type ="text"  name ="prenom"   id ="prenom"  placeholder = " Prénom "  required></td></center></tr>
+            <br>
+            <tr><td><center><input type = "date" name="daten" id="daten"  ></td></center></tr><br>
+			<center>
+                <tr><td><center><input type="email" name ="mail"  id="mail" placeholder = " exemple@domaine.com" required ></td></center></tr><br>
+            <tr><td><center><input type="tel" name="tel" id="tel"  placeholder ="+212xxxxxxxx" required ></td></center></tr><br>
+                <tr><td><center><textarea id="adress" placeholder="adresse"></textarea> </td></center></tr><br>
+            <tr><td><center><input type="paiement" name="paiement" id="paiement"  placeholder ="Donne les 16 chiffres" required ></td></center></tr><br>
+                <tr><td><center><input type="cvv" name="cvv" id="cvv"  placeholder ="Donner CVV" required ></td></center></tr><br>
+                <tr><td><center><input type="exp" name="exp" id="exp"  placeholder ="date d'expiration" required ></td></center></tr><br>
+ <tr>           <td bgcolor="black"> 
+                    <center> 
+                        <form>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </form>
+                    </center>    
+                 </td>  
+              </tr> 
+            <br>    
+<tr>
+<td>
+        <button class="ENV"> valider <button> 
+                </td>
+                <td> 
+                    <a href="/main/end_page">  Envoi   </a>
+                <td>    
+           </center>
+                </td>
+</tr> 
+    </form> 
+</center>
+</section>      
+    
+    
+    
+      <script>  let progresss=document.getElementById('progressbar');
+        let totalHeightt= document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight +   "%";}</script>
+    
+
+
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
+                
+                
+   
+                
+                
+                
+                
+                <center>         <IMG src="/static/LO.png" /> </center>
+ 
+            
+               
+               
+                    
+                          
+         <script type="text/javascript">
+    
+        let progress=document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            
+            
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight +   "%";
+            
+        }
+                      
+            
+ 
+                </script>
+    
+                <BR>
+                <BR>
+                <BR>
+                <BR>
+                <BR>
+                <BR>
+                
+                </body>
+                
+          <footer>
+            
+          <center><a href="#haut">
+                <FONT color=#808080> vers le haut</FONT>
+            </a></center>
+        <a name="bas">       
+                
+    </footer> 
+                           
+    
+</html>     
+                    
+                    
