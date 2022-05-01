@@ -49,6 +49,14 @@ def mysite2_boots(request):
 
 def API_gl(request):
     try:
+        print(dict(request.GET).get('categorie')[0])
         return JsonResponse({"status": "OK", "code": 200, "data": list(Product.objects.filter(type=dict(request.GET).get('categorie')[0]).values())})
     except:
         return JsonResponse({"status": "fuck off", "code": 200})
+
+
+
+
+
+"""  ----------------------------------------------------------------  """
+

@@ -1,5 +1,5 @@
 function f(){
-  fetch('/main/api_gl?categorie=bike loob').then(res=>res.json()).then(json=>{
+  fetch('/main/api_gl?categorie=bikelube').then(res=>res.json()).then(json=>{
      
     json.data.forEach(bl => {
         document.getElementById("elmdr1").innerHTML +=
