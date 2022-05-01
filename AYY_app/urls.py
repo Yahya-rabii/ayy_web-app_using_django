@@ -16,6 +16,7 @@ urlpatterns = [
     path('end_page', views.end_page),
 
 
+
     path('api_gl', views.API_gl),
 
 
