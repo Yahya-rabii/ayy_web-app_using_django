@@ -23,7 +23,7 @@ function f(){
                 <STRONG>${glove.price}</STRONG>
             </p>
             <div class="content">
-                <a href="/main/my_site">BUY IT</a>
+                <a href="/main/mysite">BUY IT</a>
             </div>
         </div>
         `

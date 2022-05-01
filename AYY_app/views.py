@@ -1,9 +1,8 @@
 import json
-from django.forms.models import model_to_dict
 from django.core import serializers
 from itertools import product
 from urllib import response
-from django.http import HttpResponse, JsonResponse, QueryDict
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from .models import Product
 
