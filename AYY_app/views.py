@@ -1,11 +1,8 @@
-import imp
-from types import GenericAlias
-from django.http import HttpResponse, JsonResponse
+from .forms import NewUserForm
+from django.shortcuts import render
+from django.http import JsonResponse
 from django.shortcuts import render
 from .models import Product
-
-
-
 
 
 def index(request):
@@ -40,16 +37,15 @@ def mysite(request):
     return render(request, 'my site.html')
 
 
-
 def mysite2_boots(request):
     return render(request, 'site_boots.html')
 
 
-
 def err_v(request):
     return render(request, 'err.html')
-"""  ----------------------------------------------------------------  """
 
+
+"""  ----------------------------------------------------------------  """
 
 
 def API_gl(request):
@@ -60,24 +56,19 @@ def API_gl(request):
         return JsonResponse({"status": "fuck off", "code": 200})
 
 
-
-
-
 """  ----------------------------------------------------------------  """
-
-from django.shortcuts import  render
-from .forms import NewUserForm
 
 
 def register(request):
-	if request.method == "POST":
-	
-		form = NewUserForm(request.POST)
-		if form.is_valid():
-			user = form.save()
-			return render (request=request, template_name="index.html")
-		return render (request=request, template_name="err.html")
+    if request.method == "POST":
 
-	return render (request=request, template_name="register.html")
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            return render(request=request, template_name="index.html")
+        return render(request=request, template_name="err.html")
+
+    return render(request=request, template_name="register.html")
+
 
 """-------------------------------------------------------------------------------"""
