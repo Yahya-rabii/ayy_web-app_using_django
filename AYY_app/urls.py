@@ -11,13 +11,14 @@ urlpatterns = [
     path('jackets', views.mysite2_jackets),
     path('suit', views.mysite2_suit),
     path('boots', views.mysite2_boots),
-    path('helmets', views.mysite2_helmets, name='helmets'),
-    path('regest', views.mysite2_regest),
+    path('helmets', views.mysite2_helmets,),
     path('end_page', views.end_page),
+    path('err', views.err_v),
 
 
 
     path('api_gl', views.API_gl),
+
 
 
 

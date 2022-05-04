@@ -1,10 +1,11 @@
-import json
-from django.core import serializers
-from itertools import product
-from urllib import response
+import imp
+from types import GenericAlias
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from .models import Product
+
+
+
 
 
 def index(request):
@@ -39,12 +40,16 @@ def mysite(request):
     return render(request, 'my site.html')
 
 
-def mysite2_regest(request):
-    return render(request, 'REGESREATION.html')
-
 
 def mysite2_boots(request):
     return render(request, 'site_boots.html')
+
+
+
+def err_v(request):
+    return render(request, 'err.html')
+"""  ----------------------------------------------------------------  """
+
 
 
 def API_gl(request):
@@ -60,3 +65,19 @@ def API_gl(request):
 
 """  ----------------------------------------------------------------  """
 
+from django.shortcuts import  render
+from .forms import NewUserForm
+
+
+def register(request):
+	if request.method == "POST":
+	
+		form = NewUserForm(request.POST)
+		if form.is_valid():
+			user = form.save()
+			return render (request=request, template_name="index.html")
+		return render (request=request, template_name="err.html")
+
+	return render (request=request, template_name="register.html")
+
+"""-------------------------------------------------------------------------------"""
