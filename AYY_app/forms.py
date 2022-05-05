@@ -17,56 +17,25 @@ class NewUserForm(forms.Form):
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("User with that email already exists")
         return email
-
     def save(self):
-
         User.objects.create(firstname=self.cleaned_data['firstname'],
                             lastname=self.cleaned_data['lastname'],
                             email=self.cleaned_data['email'],
                             password=self.cleaned_data['password'])
-
         print(self.cleaned_data)
-
     class Meta:
         model = User
         fields = ("firstname", "lastname", "email", "password")
 
 
 
-class loginform (forms.Form):
-    email = forms.EmailField(required=True)
-    password = forms.CharField(max_length=255)
-   
 
-    def validate(self):
-        
-        email = self.cleaned_data.get('email')
-        password = self.cleaned_data.get('password')
-
-
-        if email is "":
-            raise forms.ValidationError(
-                'An email address is required to log in.'
-            )
-
-        
-        if password is None:
-            raise forms.ValidationError(
-                'A password is required to log in.'
-            )
-
-
-        if User.objects.filter(email=email).exists():
-            return {'email': email,'password':password} 
-        
-        else:
-            raise forms.ValidationError("no User with that email exists")
-
-
-
+class userForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ("email", "password")
+        fields = "__all__"
 
-
-     
+class userlogin(forms.Form):
+    email = forms.EmailField(max_length=150)
+    password = forms.CharField(max_length = 50, widget=forms.PasswordInput)
+    

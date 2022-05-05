@@ -97,6 +97,73 @@ box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 transition: 0.1s ease;
 }
 
+.or {
+position: absolute;
+top: 180px;
+left: 280px;
+width: 40px;
+height: 40px;
+background: #DDD;
+color: black;    
+border-radius: 50%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+line-height: 40px;
+text-align: center;
+}
+.right {
+position: absolute;
+top: 0;
+right: 0;
+box-sizing: border-box;
+padding: 40px;
+width: 300px;
+height: 400px;
+background: url('https://goo.gl/YbktSj');
+background-size: cover;
+background-position: center;
+border-radius: 0 2px 2px 0;
+}
+.right .loginwith {
+display: block;
+margin-bottom: 40px;
+font-size: 28px;
+color: #FFF;
+text-align: center;
+}
+button.social-signin {
+margin-bottom: 20px;
+width: 220px;
+height: 36px;
+border: none;
+border-radius: 2px;
+color: #FFF;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+transition: 0.2s ease;
+cursor: pointer;
+}
+button.social-signin:hover,
+button.social-signin:focus {
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+transition: 0.2s ease;
+
+
+}
+button.social-signin:active {
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+transition: 0.2s ease;
+}
+
+button.social-signin.google {
+background: white;
+color: black;
+   }
+
+button.social-signin.google:hover {
+background: black;
+color: white;
+   }
+
 
 
 
@@ -120,7 +187,6 @@ text-align: center;
 
  color: linear-gradient(to top,#008aff,#00ffe7);
 animation: animate 5s linear infinite;  
-
 }
 
 
@@ -149,7 +215,7 @@ animation: animate 5s linear infinite;
     
     <div id="login-box">
   <div class="left">
-    <h1>Sign up</h1>
+    <h1>Sign in</h1>
     
     {% block content %}      
     
@@ -177,7 +243,15 @@ animation: animate 5s linear infinite;
 
   </div>
   
-  
+  <div class="right">
+    <span class="loginwith">I don't have an <br />account</span>
+    
+    <button class="social-signin google">
+    <a href="/user_regest"><input type="submit" name="signup_submit" value="create one" /></a>
+   </button>
+  </div>
+  <div class="or">OR</div>
+</div>
     
         
         

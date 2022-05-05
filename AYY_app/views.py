@@ -1,3 +1,4 @@
+from urllib import response
 from AYY_app import forms 
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -72,13 +73,19 @@ def register(request):
 
 
 """-------------------------------------------------------------------------------"""
-def log(request):
+
+
+def login(request):
     if request.method == "POST":
-
-        form = forms.loginform(request.POST)
+        form = forms.userlogin(request.POST)
         if form.is_valid():
-            User = form.save()
-            return render(request=request, template_name="index.html")
-        return render(request=request, template_name="err.html")
-
-    return render(request=request, template_name="login.html")
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            try:
+               user = User.objects.get(email=email, password=password)
+               return render (request, 'index.html')
+            except:
+              return render(request=request, template_name="err_ne.html")
+    else:
+           form = forms.userlogin()
+    return render(request, 'login.html', {'form': form})

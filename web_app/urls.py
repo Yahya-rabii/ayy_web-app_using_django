@@ -37,7 +37,7 @@ urlpatterns = [
     # ----------------------------------------- 
 
     path('user_regest/', views.register),
-    path('user_login/', views.log),
+    path('user_login/', views.login),
 
 
     
