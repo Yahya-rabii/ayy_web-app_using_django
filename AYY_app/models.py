@@ -19,12 +19,14 @@ class Product(models.Model):
 
 
 class User(models.Model):
-
+    
     firstname = models.CharField(max_length=255)
     lastname = models.CharField(max_length=255)
-    email = models.CharField(max_length=255, unique=True)
+    email = models.CharField(max_length=255,unique=True)
     password = models.CharField(max_length=255)
-    dateofcreation = models.DateTimeField(max_length=255, auto_now_add=True)
+    dateofcreation = models.DateTimeField(max_length=255,auto_now_add=True)
 
+   
     def __str__(self):
         return self.firstname
+

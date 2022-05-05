@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+  
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+outline: none;
+}
+
+#login-box {
+border: solid 4px; 
+border-image: linear-gradient(GRAY,WHITE,GRAY ,WHITE,black,gray) 1;
+border-radius: 6px;
+    
+    
+position: relative;
+margin: 5% auto;
+width: 600px;
+height: 400px;
+background: rgba(0, 0, 0, 0);
+
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+position: absolute;
+top: 0;
+left: 0;
+box-sizing: border-box;
+padding: 40px;
+width: 300px;
+height: 400px;
+}
+
+h1 {
+margin: 0 0 20px 0;
+font-weight: 300;
+font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+display: block;
+box-sizing: border-box;
+margin-bottom: 20px;
+padding: 4px;
+width: 220px;
+height: 32px;
+border: none;
+border-bottom: 1px solid #AAA;
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
+font-size: 15px;
+transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+border-bottom: 2px solid #16a085;
+color: #16a085;
+transition: 0.2s ease;
+}
+
+input[type="submit"] {
+position: relative;
+width: 120px;
+height: 32px;
+background: #FFF;
+border: none;
+border-radius: 2px;
+color: #000;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+text-transform: uppercase;
+transition: 0.1s ease;
+cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+opacity: 0.8;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+opacity: 1;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+transition: 0.1s ease;
+}
+
+
+
+
+    
+    
+    
+   
+.h1th {
+position:absolute;
+top: -17%;
+left: 40%;
+
+font-size: calc(75px);
+line-height: calc(390px );
+text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+
+font-family: "Sacramento", cursive;
+text-align: center;
+
+
+
+ color: linear-gradient(to top,#008aff,#00ffe7);
+animation: animate 5s linear infinite;  
+
+}
+
+
+
+
+
+
+    
+</style>
+
+    
+<BODY BACKGROUND="/static/BACKGROUND.jpeg" P STYLE="COLOR:WHITE">
+    
+    <section>
+    <h1 class="h1th">join US</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+    
+    <div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    
+    {% block content %}      
+    
+   
+    
+   
+  
+ <form method="POST">
+          
+      
+      <input type="text" name="email" placeholder="E-mail" />
+      <input type="password" name="password" placeholder="Password" />
+      
+      
+      
+
+       
+            <input type="submit" name="signup_submit" value="Sign me in" />
+       </form>
+
+
+
+    {% endblock %}
+   
+
+  </div>
+  
+  
+    
+        
+        
+        
+        
+        </section>
+        
+    </BODY>
+
+
+
+
+</html>

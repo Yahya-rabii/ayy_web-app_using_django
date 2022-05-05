@@ -1,8 +1,8 @@
-from .forms import NewUserForm
+from AYY_app import forms 
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.shortcuts import render
-from .models import Product
+from AYY_app.models import Product , User
 
 
 def index(request):
@@ -62,9 +62,9 @@ def API_gl(request):
 def register(request):
     if request.method == "POST":
 
-        form = NewUserForm(request.POST)
+        form = forms.NewUserForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            User = form.save()
             return render(request=request, template_name="index.html")
         return render(request=request, template_name="err.html")
 
@@ -72,3 +72,13 @@ def register(request):
 
 
 """-------------------------------------------------------------------------------"""
+def log(request):
+    if request.method == "POST":
+
+        form = forms.loginform(request.POST)
+        if form.is_valid():
+            User = form.save()
+            return render(request=request, template_name="index.html")
+        return render(request=request, template_name="err.html")
+
+    return render(request=request, template_name="login.html")

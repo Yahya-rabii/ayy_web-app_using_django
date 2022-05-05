@@ -12,6 +12,7 @@ class NewUserForm(forms.Form):
     password = forms.CharField(max_length=255)
 
     def clean_email(self):
+        print(self.cleaned_data.get('email'))
         email = self.cleaned_data.get('email')
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("User with that email already exists")
@@ -29,3 +30,43 @@ class NewUserForm(forms.Form):
     class Meta:
         model = User
         fields = ("firstname", "lastname", "email", "password")
+
+
+
+class loginform (forms.Form):
+    email = forms.EmailField(required=True)
+    password = forms.CharField(max_length=255)
+   
+
+    def validate(self):
+        
+        email = self.cleaned_data.get('email')
+        password = self.cleaned_data.get('password')
+
+
+        if email is "":
+            raise forms.ValidationError(
+                'An email address is required to log in.'
+            )
+
+        
+        if password is None:
+            raise forms.ValidationError(
+                'A password is required to log in.'
+            )
+
+
+        if User.objects.filter(email=email).exists():
+            return {'email': email,'password':password} 
+        
+        else:
+            raise forms.ValidationError("no User with that email exists")
+
+
+
+    class Meta:
+        model = User
+        fields = ("email", "password")
+
+
+     
