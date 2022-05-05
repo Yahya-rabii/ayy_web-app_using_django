@@ -27,34 +27,38 @@ section{
     width: 0;  
 }
 #scrollpath
-{  
+{
     position: fixed;
     top: 0;
     right: 0;
     width: 10px;
     height: 100%;
-    background: rgba(255,255,255,0.05);  
+    background: rgba(255,255,255,0.05);
+    
 }
+
 #progressbar
-{  
+{
      position: fixed;
     top: 0;
     right: 0;
-    width: 10px;
-    
-    background: linear-gradient(to top,#008aff,#00ffe7);
+    width: 10px;    
+    background: linear-gradient(to top,#929292,#000000);
    animation: animate 5s linear infinite;  
 }
-@keyframes animate{  
+
+@keyframes animate{
     0%,100%
     {
         filter: hue-rotate(0deg);
     }
         50%
     {
-        filter: hue-rotate(360deg);  
-    }
+        filter: hue-rotate(360deg);   
+    }   
 }
+
+
 #progressbar:before
 {
     content: '';
@@ -63,9 +67,12 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,#008aff,#00ffe7);
-    filter: blur(30px);  
+    background: linear-gradient(to top,#ffffff,#000000);
+    filter: blur(30px);
+    
+    
 }
+        
 #progressbar:after
 {
     content: '';
@@ -74,11 +81,9 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,#008aff,#00ffe7);
+    background: linear-gradient(to top,#000000,#333333);
     filter: blur(30px);
-}   
-        
-        
+} 
         
         
         
@@ -180,71 +185,73 @@ a:hover {
         
         
         
-        
-        
-        
-    
-.h1th {
-    position:absolute;
-    top: 28%;
-  font-size: calc(75px);
-  line-height: calc(390px );
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-  font-family: "Sacramento", cursive;
-  text-align: center;
-     color: linear-gradient(to top,#008aff,#00ffe7);
-   animation: animate 5s linear infinite;  
+  
+.btn-shine {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 500;
+  font-size: 50px;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.pth {
-    position:absolute;
-    top: 70%;
-    left: 35%;
-  font-size: calc(18px);
-  line-height: calc(20px);
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  font-family: "Sacramento", cursive;
-    color: linear-gradient(to top,#008aff,#00ffe7);
-   animation: animate 5s linear infinite;
-}
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
   }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
+  60% {
+    background-position: 180px;
+  }
   100% {
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
+    background-position: 180px;
   }
 }
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
   }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
+  60% {
+    background-position: 180px;
+  }
   100% {
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-  color: #fff6a9;
+    background-position: 180px;
   }
-}      
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+
+  
+ 
     </style>
  
       </head>
@@ -264,78 +271,28 @@ a:hover {
         
   
     
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-             
-        <h1 class="h1th">THANK'S 4 BUYING FROM US</h1>
-        <br>
-            <p class="pth"> your product will be delivred to your adress </p>
        
-        
-        
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+      <br>
+      <br>
+      <br>
+      <br>   
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
  
-    
+    <a href="https://usecheck.com/" class="btn-shine" target="_blank">THANK'S FOR BUYING FROM US</a> 
+        
+         
+  
+   
   </section>  
     
     
 
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
- 
  
     </BODY>
     
