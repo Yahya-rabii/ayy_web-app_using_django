@@ -25,19 +25,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-xva1yho3=a53bp6i0t8g-)e=a%do&%aq3vl+6s7o#ofs(u^id'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
 
-"""
-"""
+SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+ALLOWED_HOSTS = ['*']
+CSRF_COOKIE_SECURE=True
+SECURE_HSTS_PRELOAD=True
+SESSION_COOKIE_SECURE=True
 SECURE_HSTS_SECONDS = 2_592_000
 SECURE_SSL_REDIRECT =True
-SECURE_HSTS_INCLUDE_SUBDOMAINS=True
-SESSION_COOKIE_SECURE=True
-SECURE_HSTS_PRELOAD=True
-CSRF_COOKIE_SECURE=True
+"""
 
+"""
 # Application definition
 
 INSTALLED_APPS = [
@@ -147,7 +148,7 @@ STATIC_URL = '/static/'
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 
 STATICFILES_DIRS = (
