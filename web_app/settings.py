@@ -143,7 +143,7 @@ USE_TZ = True
 
 
 
-"""
+
 STATIC_URL = '/static/'
 
 
@@ -154,25 +154,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 's_files'),
 )
-
-"""
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_PRODUCTION_DIR = os.path.abspath(os.path.join(
-os.path.dirname(__file__), '..', '..', 'static_production'))
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 's_files'),
-)
-
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(STATIC_PRODUCTION_DIR, "static")
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(STATIC_PRODUCTION_DIR, "media")
-
-
-STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "static"),
-]
