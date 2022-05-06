@@ -40,6 +40,5 @@ urlpatterns = [
     path('user_login/', views.login),
 
 
-    path('/static', include('web_app.settings.STATIC_ROOT')),  
     ]
 
