@@ -21,9 +21,7 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users_lst', UserViewSet)
 
-from django.views.static import serve
-from django.conf.urls import url
-from django.conf import settings
+
 
 urlpatterns = [
   
