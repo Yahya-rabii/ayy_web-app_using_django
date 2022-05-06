@@ -4,7 +4,9 @@ from django.urls import path , include
 from rest_framework import serializers, viewsets, routers
 from AYY_app.models import User 
 from AYY_app import views
-
+from django.views.static import serve
+from django.conf.urls import url
+from django.conf import settings
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -21,9 +23,7 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users_lst', UserViewSet)
 
-from django.views.static import serve
-from django.conf.urls import url
-from django.conf import settings
+
 
 urlpatterns = [
   
