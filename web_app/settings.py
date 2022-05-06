@@ -173,8 +173,3 @@ LOGGING = {
         },
     },
 }
-
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://ayy-cycling.herokuapp.com/'
-]
