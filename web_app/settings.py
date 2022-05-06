@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from pickle import TRUE
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -32,7 +33,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 """"""
-SRF_COOKIE_SECURE=True
+#SRF_COOKIE_SECURE=True
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 SECURE_HSTS_PRELOAD=True
 SESSION_COOKIE_SECURE=True
@@ -70,11 +71,12 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 ROOT_URLCONF = 'web_app.urls'
 
 TEMPLATES = [
