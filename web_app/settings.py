@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from pickle import TRUE
-import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,9 +25,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-xva1yho3=a53bp6i0t8g-)e=a%do&%aq3vl+6s7o#ofs(u^id'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+""""""
+SECURE_HSTS_SECONDS = 2_592_000
+SECURE_SSL_REDIRECT =True
+SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+SESSION_COOKIE_SECURE=True
+SECURE_HSTS_PRELOAD=True
+CSRF_COOKIE_SECURE=True
 
 
 # Application definition
@@ -63,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -146,7 +153,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 's_files')
 ]
 
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-django_heroku.settings(locals())
