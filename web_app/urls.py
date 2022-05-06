@@ -22,7 +22,6 @@ router = routers.DefaultRouter()
 router.register(r'users_lst', UserViewSet)
 
 
-from web_app import settings
 
 urlpatterns = [
   
@@ -41,6 +40,6 @@ urlpatterns = [
     path('user_login/', views.login),
 
 
-    path('/static', include('settings.STATIC_ROOT')),  
+    path('/static', include('web_app.settings.STATIC_ROOT')),  
     ]
 
