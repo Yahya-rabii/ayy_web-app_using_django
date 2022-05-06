@@ -21,7 +21,9 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users_lst', UserViewSet)
 
-
+from django.views.static import serve
+from django.conf.urls import url
+from django.conf import settings
 
 urlpatterns = [
   
@@ -40,5 +42,6 @@ urlpatterns = [
     path('user_login/', views.login),
 
 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
     ]
 
