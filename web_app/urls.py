@@ -22,7 +22,7 @@ router = routers.DefaultRouter()
 router.register(r'users_lst', UserViewSet)
 
 
-from django.conf import settings
+from web_app import settings
 
 urlpatterns = [
   
@@ -41,6 +41,6 @@ urlpatterns = [
     path('user_login/', views.login),
 
 
-    path('/static', settings.STATIC_ROOT),  
+    path('/static', include('settings.STATIC_ROOT')),  
     ]
 
