@@ -175,7 +175,6 @@ LOGGING = {
 }
 
 
-
-# Configure Django App for Heroku.
-from django import django_heroku
-django_heroku.settings(locals())
+from django import dj_database_url
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {'default': dj_database_url.config()}
