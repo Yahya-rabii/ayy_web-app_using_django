@@ -218,7 +218,7 @@ animation: animate 5s linear infinite;
    
   
  <form method="POST">
-          
+  {% csrf_token %}
       <input type="text" name="firstname" placeholder="firstname" />
       <input type="text" name="lastname" placeholder="lastname" />
       <input type="text" name="email" placeholder="E-mail" />
