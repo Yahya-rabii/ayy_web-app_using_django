@@ -26,6 +26,7 @@ SECRET_KEY = '-xva1yho3=a53bp6i0t8g-)e=a%do&%aq3vl+6s7o#ofs(u^id'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+
 DEBUG = False
 
 
