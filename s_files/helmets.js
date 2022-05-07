@@ -26,6 +26,8 @@ function f(){
                 <a href="/main/mysite">BUY IT</a>
             </div>
         </div>
+        <br>
+        <br>
         `
     });
   })
