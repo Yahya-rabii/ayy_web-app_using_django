@@ -173,3 +173,9 @@ LOGGING = {
         },
     },
 }
+
+
+
+# Configure Django App for Heroku.
+from django import django_heroku
+django_heroku.settings(locals())
