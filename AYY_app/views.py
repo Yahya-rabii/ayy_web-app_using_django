@@ -50,7 +50,8 @@ def mysite2_boots(request):
 def err_v(request):
     return render(request, 'err.html')
 
-
+def err_ne(request):
+    return render(request, 'err_ne.html')
 """  ----------------------------------------------------------------  """
 
 

@@ -14,6 +14,7 @@ urlpatterns = [
     path('helmets', views.mysite2_helmets,),
     path('end_page', views.end_page),
     path('err', views.err_v),
+    path('err_ne', views.err_ne),
 
 
 
