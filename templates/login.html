@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AYY-CYCLING "login"</title>
+
+  <script>
+    if (window.localStorage.getItem("token") != null){
+      window.location = "/main"
+    }
+    </script>
+
 </head>
 
 
@@ -196,6 +203,8 @@
     animation: animate 5s linear infinite;
   }
 </style>
+
+
 
 
 <BODY BACKGROUND="/static/BACKGROUND.jpeg" P STYLE="COLOR:WHITE">
