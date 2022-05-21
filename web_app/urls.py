@@ -4,6 +4,7 @@ from django.urls import path , include
 from rest_framework import serializers, viewsets, routers
 from AYY_app.models import User 
 from AYY_app import views
+from AYY_app.views import LoginView
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -38,7 +39,7 @@ urlpatterns = [
 
     path('', views.register),
     path('user_login/', views.login),
-
+    path('auth-usr-login/', LoginView)
 
     ]
 

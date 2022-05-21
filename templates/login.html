@@ -1,257 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYY-CYCLING "login"</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYY-CYCLING "login"</title>
 </head>
 
 
 <style>
-  
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
-*:focus {
-outline: none;
-}
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
-#login-box {
-border: solid 4px; 
-border-image: linear-gradient(GRAY,WHITE,GRAY ,WHITE,black,gray) 1;
-border-radius: 6px;
-    
-    
-position: relative;
-margin: 5% auto;
-width: 600px;
-height: 400px;
-background: rgba(0, 0, 0, 0);
+  *:focus {
+    outline: none;
+  }
 
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.left {
-position: absolute;
-top: 0;
-left: 0;
-box-sizing: border-box;
-padding: 40px;
-width: 300px;
-height: 400px;
-}
-
-h1 {
-margin: 0 0 20px 0;
-font-weight: 300;
-font-size: 28px;
-}
-
-input[type="text"],
-input[type="password"] {
-display: block;
-box-sizing: border-box;
-margin-bottom: 20px;
-padding: 4px;
-width: 220px;
-height: 32px;
-border: none;
-border-bottom: 1px solid #AAA;
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-font-size: 15px;
-transition: 0.2s ease;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-border-bottom: 2px solid #16a085;
-color: #16a085;
-transition: 0.2s ease;
-}
-
-input[type="submit"] {
-position: relative;
-width: 120px;
-height: 32px;
-background: #FFF;
-border: none;
-border-radius: 2px;
-color: #000;
-font-family: 'Roboto', sans-serif;
-font-weight: 500;
-text-transform: uppercase;
-transition: 0.1s ease;
-cursor: pointer;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-opacity: 0.8;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-transition: 0.1s ease;
-}
-
-input[type="submit"]:active {
-opacity: 1;
-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-transition: 0.1s ease;
-}
-
-.or {
-position: absolute;
-top: 180px;
-left: 280px;
-width: 40px;
-height: 40px;
-background: #DDD;
-color: black;    
-border-radius: 50%;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-line-height: 40px;
-text-align: center;
-}
-.right {
-position: absolute;
-top: 0;
-right: 0;
-box-sizing: border-box;
-padding: 40px;
-width: 300px;
-height: 400px;
-background: url('https://goo.gl/YbktSj');
-background-size: cover;
-background-position: center;
-border-radius: 0 2px 2px 0;
-}
-.right .loginwith {
-display: block;
-margin-bottom: 40px;
-font-size: 28px;
-color: #FFF;
-text-align: center;
-}
-button.social-signin {
-margin-bottom: 20px;
-width: 220px;
-height: 36px;
-border: none;
-border-radius: 2px;
-color: #FFF;
-font-family: 'Roboto', sans-serif;
-font-weight: 500;
-transition: 0.2s ease;
-cursor: pointer;
-}
-button.social-signin:hover,
-button.social-signin:focus {
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-transition: 0.2s ease;
+  #login-box {
+    border: solid 4px;
+    border-image: linear-gradient(GRAY, WHITE, GRAY, WHITE, black, gray) 1;
+    border-radius: 6px;
 
 
-}
-button.social-signin:active {
-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-transition: 0.2s ease;
-}
+    position: relative;
+    margin: 5% auto;
+    width: 600px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0);
 
-button.social-signin.google {
-background: white;
-color: black;
-   }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
 
-button.social-signin.google:hover {
-background: black;
-color: white;
-   }
+  .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+  }
+
+  h1 {
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-bottom: 2px solid #16a085;
+    color: #16a085;
+    transition: 0.2s ease;
+  }
+
+  input[type="submit"] {
+    position: relative;
+    width: 120px;
+    height: 32px;
+    background: #FFF;
+    border: none;
+    border-radius: 2px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+
+  input[type="submit"]:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+  }
+
+  .or {
+    position: absolute;
+    top: 180px;
+    left: 280px;
+    width: 40px;
+    height: 40px;
+    background: #DDD;
+    color: black;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background: url('https://goo.gl/YbktSj');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .right .loginwith {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #FFF;
+    text-align: center;
+  }
+
+  button.social-signin {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+
+  button.social-signin:hover,
+  button.social-signin:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
 
 
+  }
 
+  button.social-signin:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+  }
 
-    
-    
-    
-   
-.h1th {
-top: -17%;
-position: relative;
-margin: 1% auto;
+  button.social-signin.google {
+    background: white;
+    color: black;
+  }
 
-
-font-size: calc(75px);
-line-height: calc(390px );
-text-shadow: 0 0 5px #7a7a7a, 0 0 15px #7a7a7a, 0 0 20px #7a7a7a, 0 0 40px #7a7a7a, 0 0 60px #525252, 0 0 10px #7a7a7a, 0 0 98px #525252;
-
-font-family: "Sacramento", cursive;
-text-align: center;
-
-
-
- color: linear-gradient(to top,#008aff,#00ffe7);
-animation: animate 5s linear infinite;  
-}
+  button.social-signin.google:hover {
+    background: black;
+    color: white;
+  }
 
 
 
 
 
 
-    
+
+
+  .h1th {
+    top: -17%;
+    position: relative;
+    margin: 1% auto;
+
+
+    font-size: calc(75px);
+    line-height: calc(390px);
+    text-shadow: 0 0 5px #7a7a7a, 0 0 15px #7a7a7a, 0 0 20px #7a7a7a, 0 0 40px #7a7a7a, 0 0 60px #525252, 0 0 10px #7a7a7a, 0 0 98px #525252;
+
+    font-family: "Sacramento", cursive;
+    text-align: center;
+
+
+
+    color: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+  }
 </style>
 
-    
+
 <BODY BACKGROUND="/static/BACKGROUND.jpeg" P STYLE="COLOR:WHITE">
-    
-    <section>
+
+  <section>
     <h1 class="h1th">Welcome back</h1>
-     
+
     <div id="login-box">
-  <div class="left">
-    <h1>Sign in</h1>
-    
-    {% block content %}      
-    
-   
-    
-   
-  
- <form method="POST">
-  {% csrf_token %}
-
-      
-      <input type="text" name="email" placeholder="E-mail" />
-      <input type="password" name="password" placeholder="Password" />
-      
-      
-      
-
-       
-            <input type="submit" name="signup_submit" value="Sign me in" />
-       </form>
+      <div class="left">
+        <h1>Sign in</h1>
 
 
 
-    {% endblock %}
-   
 
-  </div>
-  
-  <div class="right">
-    <span class="loginwith">I don't have an <br />account</span>
-    
-    <button class="social-signin google">
-    <a href="/"><input type="submit" name="signup_submit" value="create one" /></a>
-   </button>
-  </div>
-  <div class="or">OR</div>
-</div>
-    
-        
-        
-        
-        
-        </section>
-        
-    </BODY>
+
+
+
+
+        <input id="email" type="email" name="email" placeholder="E-mail" />
+        <input id="password" type="password" name="password" placeholder="Password" />
+
+
+
+
+
+        <input type="button" name="signup_submit" value="Sign me in" onclick="HandleClick();" />
+
+
+      </div>
+
+      <div class="right">
+        <span class="loginwith">I don't have an <br />account</span>
+
+        <button class="social-signin google">
+          <a href="/"><input type="submit" name="signup_submit" value="create one" /></a>
+        </button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+
+
+
+    <script>
+      const HandleClick = () => {
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+
+        fetch('/auth-usr-login/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+              // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify({
+              email,
+              password
+            })
+          })
+          .then(res => res.json())
+          .then(data => {
+            if (data.message != "success")
+              alert("Incorrect email or password")
+            else
+            {
+              window.localStorage.setItem("token", data.token)
+              window.location = "/main"
+            }
+              
+          })
+
+      }
+    </script>
+
+  </section>
+
+</BODY>
 
 
 

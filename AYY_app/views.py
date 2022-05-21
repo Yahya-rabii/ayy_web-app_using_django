@@ -1,9 +1,14 @@
+from ast import Not
+from datetime import datetime
+from multiprocessing import AuthenticationError
 from urllib import response
 from AYY_app import forms 
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.shortcuts import render
 from AYY_app.models import Product , User
+from web_app.settings import SECRET_KEY
+from jwt import encode
 
 
 def index(request):
@@ -88,9 +93,45 @@ def login(request):
               return render(request=request, template_name="err_ne.html")
     else:
            form = forms.userlogin()
-    return render(request, 'login.html', {'form': form})
+    return render(request=request, template_name="login.html")
 
 
 
 
     #----------------------------------------------------------------#
+
+from rest_framework.response import Response
+from rest_framework.views import APIView
+import datetime
+
+from json import loads
+
+def LoginView(request):
+    request.POST = loads(request.body)
+    email= request.POST['email']
+    password= request.POST['password']
+
+    if email is None:
+        return Response()
+    if password is None:
+        return Response()
+
+    user = User.objects.filter(email=email).first()
+
+    if user is None:
+        return JsonResponse({"status": 401, "message": "Invalid email or password"}, status=401)
+        
+    if user.password != password:
+        return JsonResponse({"status": 401, "message": "Invalid email or password"}, status=401)
+
+
+    payload={
+
+        'id':user.id,
+        'exp': datetime.datetime.now() + datetime.timedelta(seconds=3600)
+
+    }
+           
+    return JsonResponse({'message' : 'success',
+                    'token': encode(payload, SECRET_KEY, algorithm='HS256')},
+                    status=200)

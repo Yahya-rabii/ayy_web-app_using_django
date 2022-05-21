@@ -10,6 +10,7 @@ whitenoise = "*"
 gunicorn = "*"
 django-heroku = "*"
 dj-database-url = "*"
+pyjwt = "*"
 
 [dev-packages]
 
