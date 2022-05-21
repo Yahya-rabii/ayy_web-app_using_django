@@ -27,19 +27,25 @@ SECRET_KEY = '-xva1yho3=a53bp6i0t8g-)e=a%do&%aq3vl+6s7o#ofs(u^id'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-DEBUG = False
 
+DEBUG =True
+CSRF_COOKIE_SECURE=False
+SESSION_COOKIE_SECURE=False
+SECURE_SSL_REDIRECT =False
 
 
 ALLOWED_HOSTS = ['*']
 
 """"""
+#DEBUG = False
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 SECURE_HSTS_PRELOAD=True
-SESSION_COOKIE_SECURE=True
-SECURE_HSTS_SECONDS = 2_592_000
-SECURE_SSL_REDIRECT =True
-CSRF_COOKIE_SECURE=True
+#SESSION_COOKIE_SECURE=True
+#ECURE_HSTS_SECONDS = 2_592_000
+#SECURE_SSL_REDIRECT =True
+#CSRF_COOKIE_SECURE=True
+
+
 
 # Application definition
 
@@ -61,6 +67,7 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
