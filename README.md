@@ -16,7 +16,7 @@
 |```/```| POST | (firstname, lastname, email, phone_number, password) (Required) |render an HTML file containes a registration form where will create a new user if the all fields are valid , If the email adress is already existed an erreur page will be rendred |
 |```user_login/```|POST| (email, password) (Required) |render an HTML file containes a login form where  this will search for the user's email & password in the DB  and render an HTML page containes the main page of the website |
 |```api/auth-login/```|POST|(email, password) Required |Returns a valid JsonResponse if the user is valid |
-|```add_users/```|GET| this allow admins to check the list of pre-auth users |
+|```add_users/```|GET|| this allow admins to check the list of pre-auth users |
 |```api-auth/```|POST| (id, password) (Required)  |this allow admins to login in order to check the list of pre-auth users |
 |```main/```|GET| this will render an HTML page that present the main gage of this web project|
 |```/admin```|POST|(id, password) (Required) | in order to login to the django administration env where you can add new products and save them to the query. |
