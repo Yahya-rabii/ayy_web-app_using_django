@@ -9,10 +9,10 @@
 ### this webapp is an academic project still under development.
 
 
-# API routes documentation:
+# routes documentation:
 
-| Route|Method|Params| Description|
-|------|-------|------|------------|
+| Route  |Method|Params| Description|
+|--------|-------|------|------------|
 |```/```| POST | (firstname, lastname, email, phone_number, password) (Required) |render an HTML file containes a registration form where will create a new user if the all fields are valid , If the email adress is already existed an erreur page will be rendred |
 |```user_login/```|POST| (email, password) (Required) |render an HTML file containes a login form where  this will search for the user's email & password in the DB  and render an HTML page containes the main page of the website |
 |```api/auth-login/```|POST|(email, password) Required |Returns a valid JsonResponse if the user is valid |
