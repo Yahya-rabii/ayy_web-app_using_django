@@ -28,4 +28,4 @@
 |```/main/helmets```|GET||this will render a page containes all helmets-type products |
 |```/err_ne```|GET||this will render an HTML page that present an error (401 bad request) in case the user try to login with an invalid email adresse or password  |
 |```/err```|GET||this will render an HTML page that present an error (401 bad request) in case the user try to regest with an existing email adresse |
-|```/API_gl```|GET||this api suitable to differentiate between types of products |
+|```/API_gl```|GET||this api suitable to differentiate between types of products and add each product into the right page |
