@@ -1,446 +1,603 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<!-- Basic -->
+
 <head>
-    
-  <title> home </title>
+  <script src="https://kit.fontawesome.com/1d2a3e634f.js" crossorigin="anonymous"></script>
+
     <meta charset="utf-8">
-    
-    <style>
-*
-{
-    margin: 0;
-    padding: 0;
-    font-family: consolas; 
-}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-section{
-    padding: 50px; 
-}
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-::-webkit-scrollbar
-{
-    width: 0;
-}
+    <!-- Site Metas -->
+    <title>AYY-cycling</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-#scrollpath
-{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    height: 100%;
-    background: rgba(255,255,255,0.05);
-    
-}
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
 
-#progressbar
-{
-     position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;    
-    background: linear-gradient(to top,#929292,#000000);
-   animation: animate 5s linear infinite;  
-}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/custom.css">
 
-@keyframes animate{
-    0%,100%
-    {
-        filter: hue-rotate(0deg);
-    }
-        50%
-    {
-        filter: hue-rotate(360deg);   
-    }   
-}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-
-#progressbar:before
-{
-    content: '';
-     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top,#ffffff,#000000);
-    filter: blur(30px);
-    
-    
-}
-        
-#progressbar:after
-{
-    content: '';
-     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top,#000000,#333333);
-    filter: blur(30px);
-}
-        
-body{
-
-    background-color: black;
-    margin: 0;
-    padding:0;
-}
-#rolling_bar{
-  
-    position: absolute;
-    left:94%;
-    top: 4.5%;
-    background: none;
-    padding: 1;
-    height: 40px;
-    border-bottom: darkgray solid 3px;
-    border-radius: 40px;
-}
-
-#txt{
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    color: white;
-    font-size: 17px;
-    transition: 0.8s;
-    transition: left;
-    line-height: 40px;
-    width: 0;   
-}
-        
-#btn{
-    height: 36px;
-    width: 36px;
-    background-color: grey;
-    border: gray solid 3px;
-    border-radius:50%;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.8s;
-}
-#rolling_bar:hover > #txt{
-    margin: 1px;
-    width: 220px;    
-}
-
-#rolling_bar:hover > #btn{
-    transform: rotate(0turn);
-    transition: 0.8s;
-}
-
-        
-        
-        
-        
-        
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: blue;
-    
-}
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0; 
-  z-index: 2; 
-  -webkit-touch-callout: none;
-}
-
-
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #fff;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #fff;
-}
-
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background-color: rgb (0,0,0,0);    
-  
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
- 
-
-  
-   
-        
-        
-        
-        
-   a {   
-  text-decoration: none;
-  color: inherit;
-  font-size: 24px;
-}
-
-p {
-  font-weight: 700;
-  text-align:center;
-  font-size: 50px;
-  font-family: Hack, sans-serif;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #000, #fff, #000);
-  letter-spacing: 5px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: shine 5s linear infinite;
-  position: relative;
-}
-
-@keyframes shine {
-  0% {
-    background-position-x: -500%;
-  }
-  100% {
-    background-position-x: 500%;
-  }
-}        
-   
-
-
-
-
-     
-        
-        
-        
-        
-     
-        
-        
-        
-    </style>    
-    
 </head>
-    
-<BODY BACKGROUND="/static/BACKGROUND.jpeg" P STYLE="COLOR:WHITE">
-    
-     <div id="progressbar"></div>
-    <div id="scrollpath"></div>
-    
-    
-    
-    
-     <nav role="navigation">
-  <div id="menuToggle">
-   
-    <input type="checkbox" />
-    
-   
-    <span></span>
-    <span></span>
-    <span></span>
 
+<body>
 
-
-    <ul id="menu">
-      <a href="/main/helmets"><li>HELMETS</li></a>
-      <a href="/main/suit"><li>SUITS</li></a>
-      <a href="/main/jackets"><li>JACKETS</li></a>
-      <a href="/main/gloves"><li>GLOVES</li></a>
-      <a href="/main/boots"><li>BOOTS</li></a>
-      <a href="/main/bikelube"><li>Bike Lube</li></a>
-    </ul>
-  </div>
-</nav>
-    
-
-    
-    
-    
-    
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      
-    
-    
-    
-    
-    
-    
-    <div id="rolling_bar">
-    <input type="text" id="txt">
-    <a href="#" id="btn">
-        <img src="/static/loop.png" height=30px width=30>
-    </a>
+    <!-- Start Main Top -->
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-slid-box">
+                        <div id="offer-box" class="carouselTicker">
+                            <ul class="offer-box">
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 10%! Shop 
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 50% - 80% off on bike accessories
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 50% - 80% off on bike accessories
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="custom-select-box">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+						<option>MAD</option>
+						<option>USD</option>
+						<option>EUR</option>
+					</select>
+                    </div>
+                    <div class="right-phone-box">
+                        <p>Call US : <a href="#"> +212 7 01 24 25 63</a></p>
+                    </div>
+                    <div class="our-link">
+                        <ul>
+                            <li><a href="/">REGESTER</a></li>
+                            <li><a href="/user_login/">LOGIN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- End Main Top -->
 
-    <div id="progressbar"></div>
-    <div id="scrollpath"></div>
-    
-    <section>
-        
-<center> <IMG src="/static/LOGO.jpg"> </center>
+    <!-- Start Main Top -->
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <a class="navbar-brand" href="/main"><img src="#" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="/main">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/main/more">More</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/main/about">About Us</a></li>
+                        <li class="dropdown megamenu-fw">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Top</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    <li><a href="/main/jackets">Jackets</a></li>
+                                                    <li><a href="/main/helmets">Helmets</a></li>
+                                                    <li><a href="/main/boots">Boots</a></li>
+                                                    <li><a href="/main/suit">Suits</a></li>
+                                                    <li><a href="/main/gloves">Gloves</a></li>
+                                                    <li><a href="/main/bikelube">Bike lube</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Bottom</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">New</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-menu col-md-3">
+                                            <h6 class="title">Bike Accessories</h6>
+                                            <div class="content">
+                                                <ul class="menu-col">
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- end col-3 -->
+                                    </div>
+                                    <!-- end row -->
+                                </li>
+                            </ul>
+                        </li>
+                      
+                        <li class="nav-item"><a class="nav-link" href="/main/service">Our Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/main/contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
 
-    
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="side-menu"><a href="#">
+						<i class="fa fa-shopping-bag"></i>
+                            <span class="badge">3</span>
+					</a></li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
 
-    
-        
- 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      
+            </div>
 
-        
-        <p>-YA- YOUR BIKE ; OUR PRIORITY <br><a href="http://yahya-rabii.github.io/">CLICK HERE TO VISIT US</a></p>  
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    
-    <center>  <IMG src="/static/LO.png" /> </center>
-
-    </section>    
-        
-       
-      
-
-        <script type="text/javascript">
-    
-        let progress=document.getElementById('progressbar');
-        let totalHeight = document.body.scrollHeight - window.innerHeight;
-        window.onscroll = function(){
+           <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                <li class="cart-box">
+                    <ul class="cart-list">
+                        <li>
+                            <a href="#" class="photo"><img src="/static/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
+                            <h6><a href="#">sh Bike libe</a></h6>
+                            <p>1x - <span class="price">$800.00</span></p>
+                        </li>
+                        <li>
+                            <a href="#" class="photo"><img src="/static/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                            <h6><a href="#">sh Helmet</a></h6>
+                            <p>1x - <span class="price">$1000.00</span></p>
+                        </li>
+                        <li>
+                            <a href="#" class="photo"><img src="/static/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                            <h6><a href="#">sh jacket</a></h6>
+                            <p>1x - <span class="price">$2000.00</span></p>
+                        </li>
+                        <li class="total">
+                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                            <span class="float-right"><strong>Total</strong>: $3800.00</span>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <!-- End Side Menu -->
             
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-left">
+                <img src="/static/banner-01.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> AYY-cycling</strong></h1>
+                            <p class="m-b-40"> your bike our priority  <br> welcome </p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="/static/banner-02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> AYY-cycling</strong></h1>
+                            <p class="m-b-40"> your bike our priority  <br> welcome </p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-right">
+                <img src="/static/banner-03.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> AYY-cycling</strong></h1>
+                            <p class="m-b-40"> your bike our priority  <br> welcome </p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Start Categories  -->
+    <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/t-shirts-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Helmets</a>
+                    </div>
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/shirt-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Suits</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/wallet-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Jackets</a>
+                    </div>
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/women-bag-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Gloves</a>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/shoes-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Boots</a>
+                    </div>
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/women-shoes-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="#">Bike lube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <div class="products-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Featured Products</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            <button class="active" data-filter="*">All</button>
+                            <button data-filter=".top-featured">Top featured</button>
+                            <button data-filter=".best-seller">Best seller</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row special-list">
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="/static/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider bike lube</h4>
+                            <h5> $70.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="new">New</p>
+                            </div>
+                            <img src="/static/img-pro-02.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider helmets</h4>
+                            <h5> $900.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="/static/img-pro-03.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider jackets</h4>
+                            <h5> $1000.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="/static/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider gloves</h4>
+                            <h5> $1500.79</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Products  -->
+
+
+
+
+    <!-- Start Instagram Feed  -->
+    <div class="instagram-box">
+        <div class="main-instagram owl-carousel owl-theme">
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-01.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-02.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-03.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-04.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-06.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-07.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
             
-            let progressHeight = (window.pageYOffset / totalHeight) * 100;
-            progress.style.height = progressHeight +   "%";
-            
-        }
-    
-    </script>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="/static/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Instagram Feed  -->
 
 
-        
-        
-        
-        
+    <!-- Start Footer  -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>About AYY-cycling</h4>
+                            <p>We’re the specialists in bike PORDRCTS hire and self-guided tours on the Great Taste Trail.When you cycle with us,you can relax and enjoy the freedom of cycling independently, with all the knowledge and support you need
+                                </p>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="#"> About Us</a></li>
+                                <li><a href="#"> Customer Service</a></li>
+                                <li><a href="#"> Terms &amp; Conditions</a></li>
+                                <li><a href="#"> Privacy Policy</a></li>
+                   
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Ghandi street <br>hay essalam<br> CASABLANCA </p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770"> +212 7 01 24 25 63</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="rabiiyahya1@gmail.com">ayy-cycling@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
 
- 
- 
-    </BODY>
-    
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2021 <a href="#">AYY-cycling</a> Design By :
+            <a href="https://html.design/">AYY-group</a></p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="/static/jquery-3.2.1.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="/static/jquery.superslides.min.js"></script>
+    <script src="/static/bootstrap-select.js"></script>
+    <script src="/static/inewsticker.js"></script>
+    <script src="/static/bootsnav.js."></script>
+    <script src="/static/images-loded.min.js"></script>
+    <script src="/static/isotope.min.js"></script>
+    <script src="/static/owl.carousel.min.js"></script>
+    <script src="/static/baguetteBox.min.js"></script>
+    <script src="/static/form-validator.min.js"></script>
+    <script src="/static/contact-form-script.js"></script>
+    <script src="/static/custom.js"></script>
+</body>
+
 </html>

@@ -18,8 +18,8 @@ function f(){
             <br>
             <br>
             <br>
-            <h2>${suits.name}</h2>
-            <p>${suits.reference} <BR>
+            <h2 class="ht">${suits.name}</h2>
+            <p class="pt">${suits.reference} <BR>
                 <STRONG>${suits.price}</STRONG>
             </p>
             <div class="content">

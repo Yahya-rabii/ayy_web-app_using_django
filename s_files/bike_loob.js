@@ -13,16 +13,14 @@ function f(){
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h2>${bl.name}</h2>
-            <p>${bl.reference} <BR>
+
+            <h2 class="ht">${bl.name}</h2>
+            <p class ="pt">${bl.reference} <BR>
+
                 <STRONG>${bl.price}</STRONG>
             </p>
-            <div class="content">
+            
+            <div class="contentx">
                 <a href="/main/mysite">BUY IT</a>
             </div>
         </div>

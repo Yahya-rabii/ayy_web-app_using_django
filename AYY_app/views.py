@@ -52,6 +52,19 @@ def err_v(request):
 
 def err_ne(request):
     return render(request, 'err_ne.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def service(request):
+    return render(request, 'service.html')
+
+def contactus(request):
+    return render(request, 'contact-us.html')
+
+def more(request):
+    return render(request, 'more.html')
+
 """  ----------------------------------------------------------------  """
 
 

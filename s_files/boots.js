@@ -18,11 +18,11 @@ function f(){
             <br>
             <br>
             <br>
-            <h2>${boots.name}</h2>
-            <p>${boots.reference} <BR>
+            <h2 class="ht">${boots.name}</h2>
+            <p class="pt">${boots.reference} <BR>
                 <STRONG>${boots.price}</STRONG>
             </p>
-            <div class="content">
+            <div class="contentx">
                 <a href="/main/mysite">BUY IT</a>
             </div>
         </div>

@@ -18,11 +18,11 @@ function f(){
             <br>
             <br>
             <br>
-            <h2>${glove.name}</h2>
-            <p>${glove.reference} <BR>
+            <h2 class ="ht">${glove.name}</h2>
+            <p class ="pt">${glove.reference} <BR>
                 <STRONG>${glove.price}</STRONG>
             </p>
-            <div class="content">
+            <div class="contentx">
                 <a href="/main/mysite">BUY IT</a>
             </div>
         </div>

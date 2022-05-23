@@ -1,268 +1,488 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <script src="https://kit.fontawesome.com/1d2a3e634f.js" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+ 
+ <script>
+    if (window.localStorage.getItem("token") != null){
+      window.location = "/main"
+    }
+    </script>
+    
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYY-CYCLING "register"</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="/static/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/custom.css">
 
-    <script>
-      if (window.localStorage.getItem("token") != null){
-        window.location = "/main"
-      }
-      </script>
 </head>
 
 
-<style>
-  
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
-*:focus {
-outline: none;
-}
+  <style>
 
-#login-box {
-border: solid 4px; 
-border-image: linear-gradient(GRAY,WHITE,GRAY ,WHITE,black,gray) 1;
-border-radius: 6px;
+    body, html {
+      height:100%;
+      background: #1c1e21;
+        overflow-x: hidden;
+      font-family: 'Dosis', sans-serif;
+    }
     
+    btn {
+      border-radius: 0
     
-position: relative;
-margin: 5% auto;
-width: 600px;
-height: 400px;
-background: rgba(0, 0, 0, 0);
-
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.left {
-position: absolute;
-top: 0;
-left: 0;
-box-sizing: border-box;
-padding: 40px;
-width: 300px;
-height: 400px;
-}
-
-h1 {
-margin: 0 0 20px 0;
-font-weight: 300;
-font-size: 28px;
-}
-
-input[type="text"],
-input[type="password"] {
-display: block;
-box-sizing: border-box;
-margin-bottom: 20px;
-padding: 4px;
-width: 220px;
-height: 32px;
-border: none;
-border-bottom: 1px solid #AAA;
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-font-size: 15px;
-transition: 0.2s ease;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-border-bottom: 2px solid #16a085;
-color: #16a085;
-transition: 0.2s ease;
-}
-
-input[type="submit"] {
-position: relative;
-width: 120px;
-height: 32px;
-background: #FFF;
-border: none;
-border-radius: 2px;
-color: #000;
-font-family: 'Roboto', sans-serif;
-font-weight: 500;
-text-transform: uppercase;
-transition: 0.1s ease;
-cursor: pointer;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-opacity: 0.8;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-transition: 0.1s ease;
-}
-
-input[type="submit"]:active {
-opacity: 1;
-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-transition: 0.1s ease;
-}
-
-.or {
-position: absolute;
-top: 180px;
-left: 280px;
-width: 40px;
-height: 40px;
-background: #DDD;
-color: black;    
-border-radius: 50%;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-line-height: 40px;
-text-align: center;
-}
-.right {
-position: absolute;
-top: 0;
-right: 0;
-box-sizing: border-box;
-padding: 40px;
-width: 300px;
-height: 400px;
-background: url('https://goo.gl/YbktSj');
-background-size: cover;
-background-position: center;
-border-radius: 0 2px 2px 0;
-}
-.right .loginwith {
-display: block;
-margin-bottom: 40px;
-font-size: 28px;
-color: #FFF;
-text-align: center;
-}
-button.social-signin {
-margin-bottom: 20px;
-width: 220px;
-height: 36px;
-border: none;
-border-radius: 2px;
-color: #FFF;
-font-family: 'Roboto', sans-serif;
-font-weight: 500;
-transition: 0.2s ease;
-cursor: pointer;
-}
-button.social-signin:hover,
-button.social-signin:focus {
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-transition: 0.2s ease;
-
-
-}
-button.social-signin:active {
-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-transition: 0.2s ease;
-}
-
-button.social-signin.google {
-background: white;
-color: black;
-   }
-
-button.social-signin.google:hover {
-background: black;
-color: white;
-   }
-
-
-
-
-    
-    
-    
-   
-.h1th {
-  top: -17%;
-position: relative;
-margin: 1% auto;
-
-
-font-size: calc(75px);
-line-height: calc(390px );
-text-shadow: 0 0 5px #7a7a7a, 0 0 15px #7a7a7a, 0 0 20px #7a7a7a, 0 0 40px #7a7a7a, 0 0 60px #525252, 0 0 10px #7a7a7a, 0 0 98px #525252;
-
-font-family: "Sacramento", cursive;
-text-align: center;
-
-
-
-
- color: linear-gradient(to top,#008aff,#00ffe7);
-animation: animate 5s linear infinite;  
-
-}
-
-
-
-
-
-
-    
-</style>
-
-    
-<BODY BACKGROUND="/static/BACKGROUND.jpeg" P STYLE="COLOR:WHITE">
-    
-    <section>
-    <h1 class="h1th">join US</h1>
-  
-    
-    <div id="login-box">
-  <div class="left">
-    <h1>Sign up</h1>
-    
-    {% block content %}      
-    
-   
-    
-   
-  
- <form method="POST">
-  {% csrf_token %}
-      <input type="text" name="firstname" placeholder="firstname" />
-      <input type="text" name="lastname" placeholder="lastname" />
-      <input type="text" name="email" placeholder="E-mail" />
-      <input type="password" name="password" placeholder="Password" />
       
+    }
+    .btn:focus, .btn:active, .btn.active, .btn:active:focus {
+      outline: 0;
+      border-radius: 0
+    }
+    
+    
+    
+    .btn-larger {
+      padding: 15px 40px !important;
+      border:2px solid #dc3545 !important;;
+      border-radius: 0px !important;;
+      text-transform: uppercase;
+      font-family: 'Dosis', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: #dc3545;
+      background-color: transparent;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
       
-      
+    
+    }
+    .btn-larger:hover, .btn-larger:focus, .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+      border-color: #dc3545;
+      color: #fff;
+      background-color: #dc3545;
+      border-radius: 0
+    }
+    .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+      background-image: none;
+    }
+    .btn-larger.disabled, .btn-larger[disabled], fieldset[disabled] .btn-larger, .btn-larger.disabled:hover, .btn-larger[disabled]:hover, fieldset[disabled] .btn-larger:hover, .btn-larger.disabled:focus, .btn-larger[disabled]:focus, fieldset[disabled] .btn-larger:focus, .btn-larger.disabled:active, .btn-larger[disabled]:active, fieldset[disabled] .btn-larger:active, .btn-larger.disabled.active, .btn-larger[disabled].active, fieldset[disabled] .btn-larger.active {
+      border-color: #AEA8D3;
+      background-color: #AEA8D3;
+    }
+    .btn-larger .badge {
+      color: #AEA8D3;
+      background-color: #fff;
+    }
+    
+    div#form {
+      color: #fff;
+      background-attachment: scroll;
+      background: #1c1e21 url(/static/all-bg-title3.jpg);
+      background-position: center center;
+      background-repeat: none;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+      min-height:100%;
+    
+    }
+    
 
-       
-            <input type="submit" name="signup_submit" value="Sign me up" />
-       </form>
+    div#form .container{
+
+position: relative;
+left: 25%;
 
 
+}
+    #userform p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    #userform ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 0px;
+    }
+    #userform {
+      background: rgba(0,0,0,0.8);
+      margin: 20px 0 20px 0
+    }
+     @media (min-width: 768px) {
+    #userform {
+      background: rgba(0,0,0,0.8);
+      margin: 50px 0 20px 0
+    }
+    }
+    #userform .nav-tabs.nav-justified > li > a {
+      text-transform: uppercase;
+      font-size: 20px;
+      color: #dc3545;
+      background-color: rgba(90,90,90,0.5);
+    }
+    #userform .nav-tabs.nav-justified > .active > a, #userform .nav-tabs.nav-justified > .active > a:hover, #userform .nav-tabs.nav-justified > .active > a:focus {
+      border: 0;
+      background: #dc3545;
+      color: white;
+      border-radius: 0;
+    }
+    #userform .nav-justified > li > a {
+      margin-bottom: 0;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
+    }
+    #userform .nav-justified > li > a:hover {
+      background: #AEA8D3;
+      color: #FFF;
+    }
+    #userform .nav-tabs > li > a {
+      border: 0px solid transparent;
+      border-radius: 0
+    }
+    #userform .nav-tabs.nav-justified > li > a:hover {
+      background: #dc3545;
+      color: #FFF;
+      border-radius: 0;
+      border: 0;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
+    }
+    #userform .nav-tabs > li.active > a, #userform .nav-tabs > li.active > a:hover, #userform .nav-tabs > li.active > a:focus {
+      color: #dc3545;
+      cursor: default;
+      background-color: transparent;
+      border: 0;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
+    }
+     @media (min-width: 768px) {
+    #userform .nav-tabs.nav-justified > li > a {
+      border: 0;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
+    }
+    #userform .nav-tabs.nav-justified > li > a:hover {
+      background-color: #dc3545;
+      border-color: transparent;
+      border: 0;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
+    }
+    }
+     @media (max-width: 768px) {
+    .nav-justified > li {
+      display: table-cell !important;
+      width: 1% !important;
+    }
+    }
+    #userform .nav-tabs {
+      border-bottom: 0px solid #ddd;
+    }
+    #userform .tab-pane h2 {
+      margin: 10px 0;
+      color: #FFF;
+    }
+    #userform .tab-pane p.lead {
+      margin-top: 20px;
+    }
+    #userform .tab-content {
+      padding: 20px
+    }
+    #userform .form-group {
+      margin-bottom: 0px;
+      color: #FFF;
+    }
+    #userform .form-group input, #userform .form-group textarea {
+      padding: 10px;
+    }
+    #userform .form-group input.form-control {
+      height: auto;
+      background-color: rgba(237, 235, 250, 0.1);
+      color: #FFF;
+    }
+    #userform .form-control {
+      border-radius: 0;
+      border: 1px solid #fff;
+    }
+    #userform .form-control:focus {
+      border-color: #dc3545;
+      box-shadow: none;
+    }
+     #userform::-webkit-input-placeholder {
+     text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+     color: #bbb;
+    }
+    #userform #signup .form-group label {
+      position: relative;
+      -webkit-transform: translateY(35px);
+      -ms-transform: translateY(35px);
+      transform: translateY(35px);
+      left: 10px;
+      top: 0px;
+      color: rgba(255, 255, 255, 0.5);
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+      pointer-events: none;
+      font-size: 12px;
+      font-weight: 300
+    }
+    #userform #signup .form-group label .req {
+      margin: 2px;
+      color: #dc3545;
+    }
+    #userform #signup .form-group label.active {
+      -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      left: 2px;
+      font-size: 12px;
+    }
+    #userform #signup .form-group label.active .req {
+      opacity: 0;
+    }
+    #userform label.highlight {
+      color: #ffffff;
+    }
+    #userform #login .form-group label {
+      position: relative;
+      -webkit-transform: translateY(35px);
+      -ms-transform: translateY(35px);
+      transform: translateY(35px);
+      left: 10px;
+      top: 0px;
+      color: rgba(255, 255, 255, 0.5);
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+      pointer-events: none;
+      font-size: 12px;
+      font-weight: 300
+    }
+    #userform #login .form-group label .req {
+      margin: 2px;
+      color: #dc3545;
+    }
+    #userform #login .form-group label.active {
+      -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      left: 2px;
+      font-size: 12px;
+    }
+    #userform #login .form-group label.active .req {
+      opacity: 0;
+    }
+    
+    .mrgn-30-top {
+      margin-top: 30px
+    }
+    
+    </style>
 
-    {% endblock %}
-   
+<body>
+    
 
+<div id="form">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
+      <div id="userform">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li ><a href="/user_login"  role="tab" data-toggle="tab">Log in</a></li>
+          <li class="active"><a href="/"  role="tab" data-toggle="tab">Sign up</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade active in" id="signup">
+            <h2 class="text-uppercase text-center"> Sign Up for Free</h2>
+            <br>
+            {% block content %}
+            <form  method="POST" id="signup">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <br>
+                   <input type="text" class="form-control" name="firstname" id="first_name" placeholder="firstname" />
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <br>
+                   <input type="text" class="form-control" name="lastname" id="last_name" placeholder="last_name"/>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <br>
+                <input type="email" class="form-control" name="email" id="email" placeholder="email" />
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <br>
+                <input type="password" class="form-control" name="password" id="password" placeholder="password" />
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="mrgn-30-top">
+                
+                <input type="submit" name="signup_submit" value="Sign me up" class="btn btn-larger btn-block"/>
+
+    
+              </div>
+            </form>
+          {% endblock %}
+          </div>
+     
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- /.container --> 
+</div> 
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+  <!-- Start Footer  -->
+  <footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>About AYY-cycling</h4>
+                        <p>We’re the specialists in bike PORDRCTS hire and self-guided tours on the Great Taste Trail.When you cycle with us,you can relax and enjoy the freedom of cycling independently, with all the knowledge and support you need
+                            </p>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#"> About Us</a></li>
+                            <li><a href="#"> Customer Service</a></li>
+                            <li><a href="#"> Terms &amp; Conditions</a></li>
+                            <li><a href="#"> Privacy Policy</a></li>
+               
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Ghandi street <br>hay essalam<br> CASABLANCA </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770"> +212 7 01 24 25 63</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="rabiiyahya1@gmail.com">ayy-cycling@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer  -->
+
+
+
+</body>
+<!-- partial -->
+ 
+
+
+
+ <script>
+
+$('#form').find('input, textarea').on('keyup blur focus', function (e) {
   
-  <div class="right">
-    <span class="loginwith">already have an <br />account</span>
-    
-    <button class="social-signin google">
-      <a href="/user_login"><input type="submit" name="signup_submit" value="Sign in" /></a>
-   </button>
-  </div>
-  <div class="or">OR</div>
-</div>
-    
-        
-        
-        
-        
-        </section>
-        
-    </BODY>
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight'); 
+			} else {
+		    label.removeClass('highlight');   
+			}   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight'); 
+			} 
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(800);
+  
+});
 
 
-
-
+ </script> 
+</body>
 </html>
