@@ -3,7 +3,7 @@
 <!-- Basic -->
 
 <head>
-    <script src="https://kit.fontawesome.com/1d2a3e634f.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1d2a3e634f.js" crossorigin="anonymous"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>contact us</title>
+    <title>AYY-cycling</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/static/bootstrap.min.css">
@@ -30,6 +30,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/custom.css">
 
+
+    <script>
+        if (window.localStorage.getItem("token") != null){
+          window.location = "/main"
+        }
+        </script>
 
 </head>
 
@@ -83,7 +89,10 @@
                         <p>Call US : <a href="#"> +212 7 01 24 25 63</a></p>
                     </div>
                     <div class="our-link">
-                 
+                        <ul>
+                            <li><a href="/">REGESTER</a></li>
+                            <li><a href="/user_login/">LOGIN</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -108,8 +117,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="/main">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/main/about">About Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="/regest">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/regest">More</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/regest">About Us</a></li>
                         <li class="dropdown megamenu-fw">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
@@ -119,12 +129,12 @@
                                             <h6 class="title">Top</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="/main/jackets">Jackets</a></li>
-                                                    <li><a href="/main/helmets">Helmets</a></li>
-                                                    <li><a href="/main/boots">Boots</a></li>
-                                                    <li><a href="/main/suit">Suits</a></li>
-                                                    <li><a href="/main/gloves">Gloves</a></li>
-                                                    <li><a href="/main/bikelube">Bike lube</a></li>
+                                                    <li><a href="/regest">Jackets</a></li>
+                                                    <li><a href="/regest">Helmets</a></li>
+                                                    <li><a href="/regest">Boots</a></li>
+                                                    <li><a href="/regest">Suits</a></li>
+                                                    <li><a href="/regest">Gloves</a></li>
+                                                    <li><a href="/regest">Bike lube</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -133,7 +143,7 @@
                                             <h6 class="title">Bottom</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                   
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -150,7 +160,7 @@
                                             <h6 class="title">Bike Accessories</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                   
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -161,8 +171,8 @@
                             </ul>
                         </li>
                       
-                        <li class="nav-item"><a class="nav-link" href="/main/service">Our Service</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/main/contact-us">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/regest">Our Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/regest">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -227,87 +237,215 @@
     </div>
     <!-- End Top Search -->
 
-    <!-- Start All Title Box -->
-    <div class="all-title-box">
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-left">
+                <img src="/static/banner-01.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> AYY-cycling</strong></h1>
+                            <p class="m-b-40"> your bike our priority  <br> welcome </p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="/static/banner-02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> AYY-cycling</strong></h1>
+                            <p class="m-b-40"> your bike our priority  <br> welcome </p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-right">
+                <img src="/static/banner-03.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> AYY-cycling</strong></h1>
+                            <p class="m-b-40"> your bike our priority  <br> welcome </p>
+                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Start Categories  -->
+    <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/t-shirts-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="/regest">Helmets</a>
+                    </div>
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/shirt-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="/regest">Suits</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/wallet-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="/regest">Jackets</a>
+                    </div>
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/women-bag-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="/regest">Gloves</a>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/shoes-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="/regest">Boots</a>
+                    </div>
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="/static/women-shoes-img.jpg" alt="" />
+                        <a class="btn hvr-hover" href="/regest">Bike lube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <div class="products-box">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Contact Us</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/main">Home</a></li>
-                        <li class="breadcrumb-item active"> Contact Us </li>
-                    </ul>
+                    <div class="title-all text-center">
+                        <h1>Featured Products</h1>
+                        <p>not available</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End All Title Box -->
-
-    <!-- Start Contact Us  -->
-    <div class="contact-box-main">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left">
-                        <h2>CONTACT INFO</h2>
-                        <p>We’re the specialists in bike products hire and self-guided tours on the Great Taste Trail.When you cycle with us,you can relax and enjoy the freedom of cycling independently, with all the knowledge and support you need.</p>
-                        <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Ghandi street <br>hay essalam,<br>CASABLANCA</p>
-                            </li>
-                            <li> 
-         
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel: +212 7 01 24 25 63"> +212 7 01 24 25 63</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="ayy-cycling@gmail.com ">ayy-cycling@gmail.com </a></p>
-                            </li>
-                        </ul>
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            <button class="active" data-filter="*">All</button>
+                            <button data-filter=".top-featured">Top featured</button>
+                            <button data-filter=".best-seller">Best seller</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-sm-12">
-                    <div class="contact-form-right">
-                        <h2>GET IN TOUCH</h2>
-                        <p>if you have any questions or queries a member of staff we will always be happy to help , fell free to contact us by filling in the fields below </p>
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="submit-button text-center">
-                                        <button class="btn hvr-hover" id="submit" type="submit">Send Message</button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
+            </div>
+
+            <div class="row special-list">
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
                             </div>
-                        </form>
+                            <img src="/static/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider bike lube</h4>
+                            <h5> $70.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="new">New</p>
+                            </div>
+                            <img src="/static/img-pro-02.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="/regest">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider helmets</h4>
+                            <h5> $900.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="/static/img-pro-03.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="/regest">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider jackets</h4>
+                            <h5> $1000.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="/static/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="/regest" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="/regest">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>shark rider gloves</h4>
+                            <h5> $1500.79</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Cart -->
+    <!-- End Products  -->
+
+
+
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
@@ -324,7 +462,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-02.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -332,7 +470,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-03.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -340,7 +478,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-04.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -348,7 +486,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-05.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -356,7 +494,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-06.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -364,7 +502,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-07.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -373,7 +511,7 @@
                 <div class="ins-inner-box">
                     <img src="/static/instagram-img-05.jpg" alt="" />
                     <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="/regest"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -393,13 +531,13 @@
                             <p>We’re the specialists in bike products hire and self-guided tours on the Great Taste Trail.When you cycle with us,you can relax and enjoy the freedom of cycling independently, with all the knowledge and support you need
                                 </p>
                             <ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                <li><a href="/regest"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -407,10 +545,10 @@
                         <div class="footer-link">
                             <h4>Information</h4>
                             <ul>
-                                <li><a href="/main/about"> About Us</a></li>
-                                <li><a href="/main/service"> Customer Service</a></li>
-                                <li><a href="#"> Terms &amp; Conditions</a></li>
-                                <li><a href="#"> Privacy Policy</a></li>
+                                <li><a href="/regest"> About Us</a></li>
+                                <li><a href="/regest"> Customer Service</a></li>
+                                <li><a href="/regest"> Terms &amp; Conditions</a></li>
+                                <li><a href="/regest"> Privacy Policy</a></li>
                    
                             </ul>
                         </div>
@@ -437,14 +575,14 @@
     </footer>
     <!-- End Footer  -->
 
-       <!-- Start copyright  -->
-       <div class="footer-copyright">
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2022 <a href="https://github.com/Yahya-rabii?tab=repositories">AYY-cycling</a> Design By :
             <a href="https://github.com/Yahya-rabii">ɴᴏxɪᴅᴇᴜꜱ</a></p>
     </div>
     <!-- End copyright  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <a href="/regest" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
     <script src="/static/jquery-3.2.1.min.js"></script>
