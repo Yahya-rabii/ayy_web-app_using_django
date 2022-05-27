@@ -65,6 +65,10 @@ def contactus(request):
 def more(request):
     return render(request, 'more.html')
 
+def false_ind(request):
+    return render(request, 'false-ind.html')
+    
+
 """  ----------------------------------------------------------------  """
 
 

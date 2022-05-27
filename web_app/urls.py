@@ -37,7 +37,8 @@ urlpatterns = [
 
     # ----------------------------------------- 
 
-    path('', views.register),
+    path('regest', views.register),
+    path('', views.false_ind),
     path('user_login/', views.login),
     path('auth-usr-login/', LoginView)
 

@@ -21,8 +21,6 @@ urlpatterns = [
     path('more', views.more),
 
 
-
-
     path('api_gl', views.API_gl),
 
 
