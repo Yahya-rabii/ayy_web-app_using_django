@@ -1,60 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <script src="https://kit.fontawesome.com/1d2a3e634f.js" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8">
   <title>Sign Up</title>
- 
- <script>
-    if (window.localStorage.getItem("token") != null){
+
+  <script>
+    if (window.localStorage.getItem("token") != null) {
       window.location = "/main"
     }
-    </script>
-    
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<html lang="en">
-<head>
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  
-  <!-- Site CSS -->
-  <link rel="stylesheet" href="/static/style.css">
-  <!-- Responsive CSS -->
-  <link rel="stylesheet" href="/static/responsive.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/static/custom.css">
+  </script>
 
 </head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <html lang="en">
+
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/custom.css">
+
+    <script src="scripthk.js"></script>
+
+
+  </head>
 
 
   <style>
-
-    body, html {
-      height:100%;
+    body,
+    html {
+      height: 100%;
       background: #1c1e21;
-        overflow-x: hidden;
+      overflow-x: hidden;
       font-family: 'Dosis', sans-serif;
     }
-    
+
     btn {
       border-radius: 0
-    
-      
     }
-    .btn:focus, .btn:active, .btn.active, .btn:active:focus {
+
+    .btn:focus,
+    .btn:active,
+    .btn.active,
+    .btn:active:focus {
       outline: 0;
       border-radius: 0
     }
-    
-    
-    
+
+
+
     .btn-larger {
       padding: 15px 40px !important;
-      border:2px solid #dc3545 !important;;
-      border-radius: 0px !important;;
+      border: 2px solid #dc3545 !important;
+      ;
+      border-radius: 0px !important;
+      ;
       text-transform: uppercase;
       font-family: 'Dosis', sans-serif;
       font-size: 18px;
@@ -64,27 +74,51 @@
       -webkit-transition: all .6s;
       -moz-transition: all .6s;
       transition: all .6s;
-      
-    
+
+
     }
-    .btn-larger:hover, .btn-larger:focus, .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+
+    .btn-larger:hover,
+    .btn-larger:focus,
+    .btn-larger:active,
+    .btn-larger.active,
+    .open .dropdown-toggle.btn-larger {
       border-color: #dc3545;
       color: #fff;
       background-color: #dc3545;
       border-radius: 0
     }
-    .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+
+    .btn-larger:active,
+    .btn-larger.active,
+    .open .dropdown-toggle.btn-larger {
       background-image: none;
     }
-    .btn-larger.disabled, .btn-larger[disabled], fieldset[disabled] .btn-larger, .btn-larger.disabled:hover, .btn-larger[disabled]:hover, fieldset[disabled] .btn-larger:hover, .btn-larger.disabled:focus, .btn-larger[disabled]:focus, fieldset[disabled] .btn-larger:focus, .btn-larger.disabled:active, .btn-larger[disabled]:active, fieldset[disabled] .btn-larger:active, .btn-larger.disabled.active, .btn-larger[disabled].active, fieldset[disabled] .btn-larger.active {
+
+    .btn-larger.disabled,
+    .btn-larger[disabled],
+    fieldset[disabled] .btn-larger,
+    .btn-larger.disabled:hover,
+    .btn-larger[disabled]:hover,
+    fieldset[disabled] .btn-larger:hover,
+    .btn-larger.disabled:focus,
+    .btn-larger[disabled]:focus,
+    fieldset[disabled] .btn-larger:focus,
+    .btn-larger.disabled:active,
+    .btn-larger[disabled]:active,
+    fieldset[disabled] .btn-larger:active,
+    .btn-larger.disabled.active,
+    .btn-larger[disabled].active,
+    fieldset[disabled] .btn-larger.active {
       border-color: #AEA8D3;
       background-color: #AEA8D3;
     }
+
     .btn-larger .badge {
       color: #AEA8D3;
       background-color: #fff;
     }
-    
+
     div#form {
       color: #fff;
       background-attachment: scroll;
@@ -95,64 +129,76 @@
       -moz-background-size: cover;
       background-size: cover;
       -o-background-size: cover;
-      min-height:100%;
-    
+      min-height: 100%;
+
     }
-    
-
-    div#form .container{
-
-position: relative;
-left: 25%;
 
 
-}
+    div#form .container {
+
+      position: relative;
+      left: 25%;
+
+
+    }
+
     #userform p {
       font-size: 14px;
       margin-bottom: 5px;
     }
+
     #userform ul {
       list-style-type: none;
       padding: 0;
       margin-bottom: 0px;
     }
+
     #userform {
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
       margin: 20px 0 20px 0
     }
-     @media (min-width: 768px) {
-    #userform {
-      background: rgba(0,0,0,0.8);
-      margin: 50px 0 20px 0
+
+    @media (min-width: 768px) {
+      #userform {
+        background: rgba(0, 0, 0, 0.8);
+        margin: 50px 0 20px 0
+      }
     }
-    }
-    #userform .nav-tabs.nav-justified > li > a {
+
+    #userform .nav-tabs.nav-justified>li>a {
       text-transform: uppercase;
       font-size: 20px;
       color: #dc3545;
-      background-color: rgba(90,90,90,0.5);
+      background-color: rgba(90, 90, 90, 0.5);
     }
-    #userform .nav-tabs.nav-justified > .active > a, #userform .nav-tabs.nav-justified > .active > a:hover, #userform .nav-tabs.nav-justified > .active > a:focus {
+
+    #userform .nav-tabs.nav-justified>.active>a,
+    #userform .nav-tabs.nav-justified>.active>a:hover,
+    #userform .nav-tabs.nav-justified>.active>a:focus {
       border: 0;
       background: #dc3545;
       color: white;
       border-radius: 0;
     }
-    #userform .nav-justified > li > a {
+
+    #userform .nav-justified>li>a {
       margin-bottom: 0;
       -webkit-transition: all .6s;
       -moz-transition: all .6s;
       transition: all .6s;
     }
-    #userform .nav-justified > li > a:hover {
+
+    #userform .nav-justified>li>a:hover {
       background: #AEA8D3;
       color: #FFF;
     }
-    #userform .nav-tabs > li > a {
+
+    #userform .nav-tabs>li>a {
       border: 0px solid transparent;
       border-radius: 0
     }
-    #userform .nav-tabs.nav-justified > li > a:hover {
+
+    #userform .nav-tabs.nav-justified>li>a:hover {
       background: #dc3545;
       color: #FFF;
       border-radius: 0;
@@ -161,7 +207,10 @@ left: 25%;
       -moz-transition: all .6s;
       transition: all .6s;
     }
-    #userform .nav-tabs > li.active > a, #userform .nav-tabs > li.active > a:hover, #userform .nav-tabs > li.active > a:focus {
+
+    #userform .nav-tabs>li.active>a,
+    #userform .nav-tabs>li.active>a:hover,
+    #userform .nav-tabs>li.active>a:focus {
       color: #dc3545;
       cursor: default;
       background-color: transparent;
@@ -170,67 +219,82 @@ left: 25%;
       -moz-transition: all .6s;
       transition: all .6s;
     }
-     @media (min-width: 768px) {
-    #userform .nav-tabs.nav-justified > li > a {
-      border: 0;
-      -webkit-transition: all .6s;
-      -moz-transition: all .6s;
-      transition: all .6s;
+
+    @media (min-width: 768px) {
+      #userform .nav-tabs.nav-justified>li>a {
+        border: 0;
+        -webkit-transition: all .6s;
+        -moz-transition: all .6s;
+        transition: all .6s;
+      }
+
+      #userform .nav-tabs.nav-justified>li>a:hover {
+        background-color: #dc3545;
+        border-color: transparent;
+        border: 0;
+        -webkit-transition: all .6s;
+        -moz-transition: all .6s;
+        transition: all .6s;
+      }
     }
-    #userform .nav-tabs.nav-justified > li > a:hover {
-      background-color: #dc3545;
-      border-color: transparent;
-      border: 0;
-      -webkit-transition: all .6s;
-      -moz-transition: all .6s;
-      transition: all .6s;
+
+    @media (max-width: 768px) {
+      .nav-justified>li {
+        display: table-cell !important;
+        width: 1% !important;
+      }
     }
-    }
-     @media (max-width: 768px) {
-    .nav-justified > li {
-      display: table-cell !important;
-      width: 1% !important;
-    }
-    }
+
     #userform .nav-tabs {
       border-bottom: 0px solid #ddd;
     }
+
     #userform .tab-pane h2 {
       margin: 10px 0;
       color: #FFF;
     }
+
     #userform .tab-pane p.lead {
       margin-top: 20px;
     }
+
     #userform .tab-content {
       padding: 20px
     }
+
     #userform .form-group {
       margin-bottom: 0px;
       color: #FFF;
     }
-    #userform .form-group input, #userform .form-group textarea {
+
+    #userform .form-group input,
+    #userform .form-group textarea {
       padding: 10px;
     }
+
     #userform .form-group input.form-control {
       height: auto;
       background-color: rgba(237, 235, 250, 0.1);
       color: #FFF;
     }
+
     #userform .form-control {
       border-radius: 0;
       border: 1px solid #fff;
     }
+
     #userform .form-control:focus {
       border-color: #dc3545;
       box-shadow: none;
     }
-     #userform::-webkit-input-placeholder {
-     text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 700;
-     color: #bbb;
+
+    #userform::-webkit-input-placeholder {
+      text-transform: uppercase;
+      font-family: 'Dosis', sans-serif;
+      font-weight: 700;
+      color: #bbb;
     }
+
     #userform #signup .form-group label {
       position: relative;
       -webkit-transform: translateY(35px);
@@ -245,10 +309,12 @@ left: 25%;
       font-size: 12px;
       font-weight: 300
     }
+
     #userform #signup .form-group label .req {
       margin: 2px;
       color: #dc3545;
     }
+
     #userform #signup .form-group label.active {
       -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
@@ -256,12 +322,15 @@ left: 25%;
       left: 2px;
       font-size: 12px;
     }
+
     #userform #signup .form-group label.active .req {
       opacity: 0;
     }
+
     #userform label.highlight {
       color: #ffffff;
     }
+
     #userform #login .form-group label {
       position: relative;
       -webkit-transform: translateY(35px);
@@ -276,10 +345,12 @@ left: 25%;
       font-size: 12px;
       font-weight: 300
     }
+
     #userform #login .form-group label .req {
       margin: 2px;
       color: #dc3545;
     }
+
     #userform #login .form-group label.active {
       -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
@@ -287,207 +358,210 @@ left: 25%;
       left: 2px;
       font-size: 12px;
     }
+
     #userform #login .form-group label.active .req {
       opacity: 0;
     }
-    
+
     .mrgn-30-top {
       margin-top: 30px
     }
-    
-    </style>
+  </style>
 
-<body>
-    
+  <body>
 
-<div id="form">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="container">
-    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
-      <div id="userform">
-        <ul class="nav nav-tabs nav-justified" role="tablist">
-          <li ><a href="/user_login" >Log in</a></li>
-          <li class="active"><a href="regest">Sign up</a></li>
-        </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade active in" id="signup">
-            <h2 class="text-uppercase text-center"> Sign Up for Free</h2>
-            <br>
-            {% block content %}
-            <form  method="POST" id="signup">
-              {% csrf_token %}
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
+
+    <div id="form">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
+          <div id="userform">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li><a href="/user_login">Log in</a></li>
+              <li class="active"><a href="regest">Sign up</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade active in" id="signup">
+                <h2 class="text-uppercase text-center"> Sign Up for Free</h2>
+                <br>
+                {% block content %}
+                <form method="POST" id="signup">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <br>
+                        <input type="text" class="form-control" name="firstname" id="first_name"
+                          placeholder="firstname" />
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <br>
+                        <input type="text" class="form-control" name="lastname" id="last_name"
+                          placeholder="last_name" />
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <br>
-                   <input type="text" class="form-control" name="firstname" id="first_name" placeholder="firstname" />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="email" />
                     <p class="help-block text-danger"></p>
                   </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <br>
-                   <input type="text" class="form-control" name="lastname" id="last_name" placeholder="last_name"/>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="password" />
                     <p class="help-block text-danger"></p>
                   </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <br>
-                <input type="email" class="form-control" name="email" id="email" placeholder="email" />
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <br>
-                <input type="password" class="form-control" name="password" id="password" placeholder="password" />
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="mrgn-30-top">
-                
-                <input type="submit" name="signup_submit" value="Sign me up" class="btn btn-larger btn-block"/>
+                  <div class="mrgn-30-top">
 
-    
+                    <input type="submit" name="signup_submit" value="Sign me up" class="btn btn-larger btn-block" />
+
+
+                  </div>
+                </form>
+                {% endblock %}
               </div>
-            </form>
-          {% endblock %}
+
+            </div>
           </div>
-     
         </div>
       </div>
+      <!-- /.container -->
     </div>
-  </div>
-  <!-- /.container --> 
-</div> 
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
 
 
-  <!-- Start Footer  -->
-  <footer>
-    <div class="footer-main">
+    <!-- Start Footer  -->
+    <footer>
+      <div class="footer-main">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-widget">
-                        <h4>About AYY-cycling</h4>
-                        <p>We’re the specialists in bike PORDRCTS hire and self-guided tours on the Great Taste Trail.When you cycle with us,you can relax and enjoy the freedom of cycling independently, with all the knowledge and support you need
-                            </p>
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-link">
-                        <h4>Information</h4>
-                        <ul>
-                            <li><a href="#"> About Us</a></li>
-                            <li><a href="#"> Customer Service</a></li>
-                            <li><a href="#"> Terms &amp; Conditions</a></li>
-                            <li><a href="#"> Privacy Policy</a></li>
-               
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-link-contact">
-                        <h4>Contact Us</h4>
-                        <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Ghandi street <br>hay essalam<br> CASABLANCA </p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770"> +212 7 01 24 25 63</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="rabiiyahya1@gmail.com">ayy-cycling@gmail.com</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="footer-widget">
+                <h4>About AYY-cycling</h4>
+                <p>We’re the specialists in bike PORDRCTS hire and self-guided tours on the Great Taste Trail.When you
+                  cycle with us,you can relax and enjoy the freedom of cycling independently, with all the knowledge and
+                  support you need
+                </p>
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
             </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="footer-link">
+                <h4>Information</h4>
+                <ul>
+                  <li><a href="#"> About Us</a></li>
+                  <li><a href="#"> Customer Service</a></li>
+                  <li><a href="#"> Terms &amp; Conditions</a></li>
+                  <li><a href="#"> Privacy Policy</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="footer-link-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                  <li>
+                    <p><i class="fas fa-map-marker-alt"></i>Address: Ghandi street <br>hay essalam<br> CASABLANCA </p>
+                  </li>
+                  <li>
+                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770"> +212 7 01 24 25 63</a></p>
+                  </li>
+                  <li>
+                    <p><i class="fas fa-envelope"></i>Email: <a href="rabiiyahya1@gmail.com">ayy-cycling@gmail.com</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </footer>
+    <!-- End Footer  -->
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+      <p class="footer-company">All Rights Reserved. &copy; 2022 <a
+          href="https://github.com/Yahya-rabii?tab=repositories">AYY-cycling</a> Design By :
+        <a href="https://yahya-rabii.github.io/">ɴᴏxɪᴅᴇᴜꜱ</a></p>
     </div>
-</footer>
-<!-- End Footer  -->
- <!-- Start copyright  -->
- <div class="footer-copyright">
-  <p class="footer-company">All Rights Reserved. &copy; 2022 <a href="https://github.com/Yahya-rabii?tab=repositories">AYY-cycling</a> Design By :
-      <a href="https://yahya-rabii.github.io/">ɴᴏxɪᴅᴇᴜꜱ</a></p>
-</div>
-<!-- End copyright  -->
+    <!-- End copyright  -->
 
 
-</body>
-<!-- partial -->
- 
+  </body>
+  <!-- partial -->
 
 
 
- <script>
 
-$('#form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-  var $this = $(this),
-      label = $this.prev('label');
+  <script>
+    $('#form').find('input, textarea').on('keyup blur focus', function (e) {
 
-	  if (e.type === 'keyup') {
-			if ($this.val() === '') {
+      var $this = $(this),
+        label = $this.prev('label');
+
+      if (e.type === 'keyup') {
+        if ($this.val() === '') {
           label.removeClass('active highlight');
         } else {
           label.addClass('active highlight');
         }
-    } else if (e.type === 'blur') {
-    	if( $this.val() === '' ) {
-    		label.removeClass('active highlight'); 
-			} else {
-		    label.removeClass('highlight');   
-			}   
-    } else if (e.type === 'focus') {
-      
-      if( $this.val() === '' ) {
-    		label.removeClass('highlight'); 
-			} 
-      else if( $this.val() !== '' ) {
-		    label.addClass('highlight');
-			}
-    }
+      } else if (e.type === 'blur') {
+        if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.removeClass('highlight');
+        }
+      } else if (e.type === 'focus') {
 
-});
+        if ($this.val() === '') {
+          label.removeClass('highlight');
+        } else if ($this.val() !== '') {
+          label.addClass('highlight');
+        }
+      }
 
-$('.tab a').on('click', function (e) {
-  
-  e.preventDefault();
-  
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-  
-  target = $(this).attr('href');
+    });
 
-  $('.tab-content > div').not(target).hide();
-  
-  $(target).fadeIn(800);
-  
-});
+    $('.tab a').on('click', function (e) {
 
+      e.preventDefault();
 
- </script> 
+      $(this).parent().addClass('active');
+      $(this).parent().siblings().removeClass('active');
+
+      target = $(this).attr('href');
+
+      $('.tab-content > div').not(target).hide();
+
+      $(target).fadeIn(800);
+
+    });
+  </script>
 </body>
+
 </html>
