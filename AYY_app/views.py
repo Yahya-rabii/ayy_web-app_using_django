@@ -15,10 +15,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-def end_page(request):
-    return render(request, 'end page.html')
-
-
 def mysite2_bikelube(request):
     return render(request, 'site_bike_lube.html')
 

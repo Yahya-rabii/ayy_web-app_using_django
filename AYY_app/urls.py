@@ -12,7 +12,6 @@ urlpatterns = [
     path('suit', views.mysite2_suit),
     path('boots', views.mysite2_boots),
     path('helmets', views.mysite2_helmets,),
-    path('end_page', views.end_page),
     path('err', views.err_v),
     path('err_ne', views.err_ne),
     path('about', views.about),
