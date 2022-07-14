@@ -276,7 +276,8 @@
                         <h2>GET IN TOUCH</h2>
                         <p>if you have any questions or queries a member of staff we will always be happy to help , fell
                             free to contact us by filling in the fields below </p>
-                        <form id="contactForm">
+                        
+                        <form id="contactForm" onsubmit="sendEmail(); reset(); return false;">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -313,6 +314,33 @@
                                 </div>
                             </div>
                         </form>
+
+
+
+                        <div id="myModal" class="modal fade">
+                            <div class="modal-dialog modal-confirm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="icon-box">
+                                        <i class="material-icons">&#xE876;</i>
+                                    </div>
+                                    <h4 class="modal-title w-100">Awesome!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">thank you " <span id="input"></span> " for contacting me, you will
+                                        receive a reply from me soon</p>
+                                </div>
+                            
+                            
+                            
+                                <div class="modal-footer">
+                                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                            </div>
+                            </div> 
+
+
                     </div>
                 </div>
             </div>
@@ -437,7 +465,7 @@
                                         CASABLANCA </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770"> +212 7 01
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+212 701242563"> +212 7 01
                                             24 25 63</a></p>
                                 </li>
                                 <li>
@@ -464,6 +492,46 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
+    
+    <script>
+
+
+
+function sendEmail() {
+
+document.getElementById('input').innerHTML = document.getElementById("name").value;
+
+$('#myModal').modal('show');
+
+var msg = {
+content: {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value
+}
+}
+
+var dsreq = new XMLHttpRequest();
+
+dsreq.open('POST',
+'https://discord.com/api/webhooks/995484149609668668/M98kpyqLUo0a5Xx7Cw4HOKulttFt3oYXsOh0zZRySDr-xPnnImIRcOHKZvsHrcj_WMpb'
+);
+
+dsreq.setRequestHeader('Content-Type', 'application/json');
+
+dsreq.send(JSON.stringify({
+content: "```json\n" + JSON.stringify(msg) + "```",
+username: "new portfolio message"
+}));
+
+
+
+}
+
+    </script>
+    
     <script src="/static/jquery-3.2.1.min.js"></script>
     <script src="/static/popper.min.js"></script>
     <script src="/static/bootstrap.min.js"></script>
